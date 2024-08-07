@@ -9,7 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { Product } from 'src/entities/product.entity';
+import { Product } from 'src/models/product.entity';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('products')

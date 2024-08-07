@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { ProductsModule } from './products/products.module';
-import { UsersModule } from './users/users.module';
-import { Product } from './entities/product.entity';
-import { User } from './entities/user.entity';
-import { AuthModule } from './auth/auth.module';
+import { Product } from './models/product.entity';
+import { User } from './models/user.entity';
+import { featureModules } from './modules';
 
 @Module({
   imports: [
@@ -22,9 +20,7 @@ import { AuthModule } from './auth/auth.module';
         synchronize: true,
       }),
     }),
-    ProductsModule,
-    UsersModule,
-    AuthModule,
+    featureModules
   ],
   controllers: [],
   providers: [],

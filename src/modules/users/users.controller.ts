@@ -9,7 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { User } from 'src/entities/user.entity';
+import { User } from 'src/models/user.entity';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('users')
