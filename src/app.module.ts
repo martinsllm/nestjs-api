@@ -20,7 +20,7 @@ import { featureModules } from './modules';
         synchronize: true,
       }),
     }),
-    ...featureModules
+    ...featureModules,
   ],
   controllers: [],
   providers: [],
